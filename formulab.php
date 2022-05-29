@@ -15,7 +15,8 @@
         <div class="mb-3">
             <h1>calculo de notas</h1>
             <br>
-            <label for="nombre" class="p-3 mb-2 bg-success text-white">nombre del alumno:</label>
+            <table>
+                <td><label for="nombre" class="p-3 mb-2 bg-success text-white">nombre del alumno:</label>
             <input type="text" class="p-3 mb-2 bg-light text-dark" name="nombre" id="nombre"><br>
         </div>
         <div class="mb-3">
@@ -31,7 +32,10 @@
             <input type="float" class="p-3 mb-2 bg-light text-dark" name="parcial" id="parcial">
         </div>
         <div class="col-auto">
-            <button type="submit" class="btn btn-success" class="btn btn-primary btn-lg">Enviar</button>
+            <button type="submit" class="btn btn-success" >Enviar</button>
+        </td>
+            </table>
+            
         </div>
     </form>
     </body>
