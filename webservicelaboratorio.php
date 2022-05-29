@@ -11,8 +11,8 @@ $server->wsdl->addComplexType(
     '',
     array(
           'nombre'=>array('name'=>'nombre','type'=>'xsd:string'),
-          'nota1'=>array('name'=>'laboratorio1','type'=>'xsd:float'),
-          'nota2'=>array('name'=>'laboratorio2','type'=>'xsd:float'),
+          'laboratorio1'=>array('name'=>'laboratorio1','type'=>'xsd:float'),
+          'laboratorio2'=>array('name'=>'laboratorio2','type'=>'xsd:float'),
           'parcial'=>array('name'=>'parcial','type'=>'xsd:float'),
           'promedio'=>array('name'=>'promedio','type'=>'xsd:float')
     )
@@ -26,11 +26,17 @@ $server->register(
     'urn:server#promedioServer',
     'rpc',
     'encoded',
-    'Funcion que solicita 3 notas y devuelve el promedio final'
+    'Funcion que solicita dos notas de laboratorios y de parcial, devuelve el promedio final'
 );
 
 function promedio($nombre, $laboratorio1, $laboratorio2, $parcial){
-        'nota2'=>$laboratorio2,
+    $promedio=($laboratorio1*0.25)+($laboratorio2*0.25)+($parcial*0.50);
+    $conect = mysqli_connect("localhost", "root", "catolica", "registro_yaque");
+    $this->executeInsert("insert into alumno_yaque set nombre='{$nombre}', laboratorio1='{$laboratorio1}', 
+    laboratorio2='{$laboratorio2}', parcial='{$parcial}'");
+    $result=array('nombre'=>$nombre,
+        'laboratorio1'=>$laboratorio1,
+        'laboratorio2'=>$laboratorio2,
         'parcial'=>$parcial,
         'promedio'=>$promedio
     );

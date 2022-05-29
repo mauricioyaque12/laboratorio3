@@ -1,33 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <title>notas de ciclo</title>
 </head>
 <body>
-    <form name="formulario" method="post" action="calculoslab.php">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</body>
+<body>
+    <body>
+    <form name="calculoslab" method="post" action="calculoslab.php">
         <div class="mb-3">
-            <label for="nombre" class="form-label">nombre:</label>
-            <input type="text" class="form-control" name="nombre" id="nombre">
+            <h1>calculo de notas</h1>
+            <br>
+            <label for="nombre" class="p-3 mb-2 bg-success text-white">nombre del alumno:</label>
+            <input type="text" class="p-3 mb-2 bg-light text-dark" name="nombre" id="nombre"><br>
         </div>
         <div class="mb-3">
-            <label for="laboratorio1" class="form-label">Laboratorio 1:</label>
-            <input type="float" class="form-control" name="laboratorio1" id="laboratorio1">
+            <label for="laboratorio1" class="p-3 mb-2 bg-success text-white">nota del laboratorio 1:</label>
+            <input type="float" class="p-3 mb-2 bg-light text-dark" name="laboratorio1" id="laboratorio1"><br>
         </div>
         <div class="mb-3">
-            <label for="laboratorio2" class="form-label">Laboratorio 2:</label>
-            <input type="float" class="form-control" name="laboratorio2" id="laboratorio2">
+            <label for="laboratorio2" class="p-3 mb-2 bg-success text-white">nota del laboratorio 2:</label>
+            <input type="float" class="p-3 mb-2 bg-light text-dark" name="laboratorio2" id="laboratorio2">
         </div>
         <div class="mb-3">
-            <label for="parcial" class="form-label">Parcial:</label>
-            <input type="float" class="form-control" name="parcial" id="parcial">
+            <label for="parcial" class="p-3 mb-2 bg-success text-white">Parcial:</label>
+            <input type="float" class="p-3 mb-2 bg-light text-dark" name="parcial" id="parcial">
         </div>
         <div class="col-auto">
-            <button type="submit" class="btn btn-primary mb-3">Enviar</button>
+            <button type="submit" class="btn btn-success" class="btn btn-primary btn-lg">Enviar</button>
         </div>
     </form>
+    </body>
 </body>
 </html>
